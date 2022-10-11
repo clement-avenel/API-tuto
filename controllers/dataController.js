@@ -4,7 +4,7 @@ exports.index = (req, res) => {
   res.json(Data)
 };
 
-exports.getOnlyUsersPhonesNumbers = (req, res) => {
+exports.getUsersPhonesNumbers = (req, res) => {
   let phoneNumbers = [];
   let users = Data.people;
   for (user of users){
