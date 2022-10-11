@@ -1,7 +1,7 @@
 const app = require('./server');
 const metadata = require('./package.json');
 
-const port = process.env.PORT || 8081;
+const port = process.env.PORT || 8080;
 
 app.listen(port, () => {
   process.stdout.write(
