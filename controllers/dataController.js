@@ -2,18 +2,18 @@ const Data = require('../data/stupid.json');
 
 exports.getPhoneNumbers = (req, res) => {
     
-    var result = [];
+  var result = [];
 
-    for (var peoples of Data.people)
+  for (var peoples of Data.people)
 
-        for (var phoneNumbers of peoples.phoneNumber)
+    for (var phoneNumbers of peoples.phoneNumber)
 
-            result.push(phoneNumbers.number) ;
+      result.push(phoneNumbers.number) ;
 
-    res.send(result);
+  res.send(result);
 };
 
 
 exports.index = (req, res) => {
-    res.json(Data);
+  res.json(Data);
 };
