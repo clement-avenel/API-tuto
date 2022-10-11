@@ -6,9 +6,7 @@ const dataController = require('./controllers/dataController');
 
 // Data routes
 router.get('/', dataController.index);
-
-// Only phones numbers
-router.get('/phones', dataController.getOnlyUsersNumbers);
+router.get('/phones', dataController.getOnlyUsersPhonesNumbers);
 
 // Export API routes
 module.exports = router;
