@@ -1,16 +1,21 @@
+const { param } = require('../api-routes');
 const Data = require('../data/stupid.json');
 
 exports.index = (req, res) => {
   res.json(Data)
 };
 
-exports.getUserByName = (name, response) => {
+exports.getUserByName = (req, res) => {
 let resurt = Data.people;
-let names = [];
+let age = [];
+let nameParam = req.params.name;
+
 
   for (const person of resurt) {
-    names.push(person.name);
+    if(person.name === nameParam){
+      age = person.age;
+    }
   };
 
-  response.json(names);
+  res.json(age);
 };
