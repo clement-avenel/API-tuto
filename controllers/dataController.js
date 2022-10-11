@@ -5,7 +5,7 @@ exports.index = (req, res) => {
 };
 
 exports.getUserByPhone = (req, res) => {
-    const phoneNumber = req.query.phone;
+    const phoneNumber = req.params.phoneNumber;
     let users = [];
 
     Object.entries(Data.people).forEach(([key, value]) => {
