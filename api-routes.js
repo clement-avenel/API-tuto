@@ -5,7 +5,14 @@ const router = require('express').Router();
 const dataController = require('./controllers/dataController');
 
 // Data routes
-router.get('/', dataController.index);
+router.get('/GetPeople', dataController.GetPeople);
+
+router.get('/GetAge', dataController.GetAge);
+
+router.get('/InsertPeople', dataController.InsertPeople);
+
+router.get('/DeletePeople', dataController.DeletePeople);
+
 
 // Export API routes
 module.exports = router;
