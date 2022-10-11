@@ -10,5 +10,5 @@ exports.getAdresse = (req, res) => {
   Data['people'].forEach(element => {
     arrayAddress.push(element['address']);
   });
-  res.json(arrayAddress);
+  res.json({'adresse':arrayAddress});
 };
