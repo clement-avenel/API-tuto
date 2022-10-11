@@ -4,7 +4,13 @@ exports.index = (req, res) => {
   res.json(Data)
 };
 
-exports.getUserByName = (name, res) => {
-  let file = JSON.parse(res.json(Data));
-  file = "ouais";
+exports.getUserByName = (name, response) => {
+let resurt = Data.people;
+let names = [];
+
+  for (const person of resurt) {
+    names.push(person.name);
+  };
+
+  response.json(names);
 };
