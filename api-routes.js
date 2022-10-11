@@ -5,6 +5,6 @@ const router = require('express').Router();
 const dataController = require('./controllers/dataController');
 // Data routes
 router.get('/', dataController.index);
-router.get('/people_number', dataController.people_number)
+router.get('/get_people_number', dataController.get_people_number)
 // Export API routes
 module.exports = router;
