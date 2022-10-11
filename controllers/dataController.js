@@ -6,15 +6,15 @@ exports.index = (req, res) => {
 
 exports.getUserByPhone = (req, res) => {
     const phoneNumber = req.query.phone;
-    let response = [];
+    let users = [];
 
     Object.entries(Data.people).forEach(([key, value]) => {
         Object.entries(value.phoneNumber).forEach(([k, v]) => {
             if (v.number == phoneNumber) {
-                response.push(Data.people[key]);
+                users.push(Data.people[key]);
             }
         });
     });
 
-    res.json(response);
+    res.json(users);
 };
