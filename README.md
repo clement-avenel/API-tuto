@@ -8,5 +8,3 @@ npm install
 ```node
 npm run dev
 ```
-
-test
